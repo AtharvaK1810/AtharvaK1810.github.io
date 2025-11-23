@@ -15,7 +15,6 @@
       <div class="nav-logo">Atharva</div>
       <nav class="nav-links">
         <a href="#hero">Overview</a>
-        <a href="#summary">Summary</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
@@ -27,18 +26,18 @@
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="hero-inner">
+
       <p class="hero-eyebrow">Embedded Systems. IoT. FPGA. Hardware Security.</p>
 
       <h1 class="hero-title">Atharva Prashant Kale</h1>
 
       <p class="hero-subtitle">
         Graduate student in Internet of Things at Northeastern University.
-        I design secure and reliable embedded and IoT systems, from hardware and FPGA design
-        to firmware and communication protocols.
+        I design secure embedded and IoT systems from hardware to firmware.
       </p>
 
       <div class="hero-actions">
-        <!-- spaces in filename are URL encoded -->
+        <!-- CV filename has spaces, so they must be URL encoded -->
         <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">
           View CV
         </a>
@@ -52,198 +51,131 @@
     </div>
   </section>
 
-  <!-- Summary & Top Skills -->
-  <section id="summary" class="section">
-    <div class="section-inner summary-grid">
-      <div class="summary-card">
-        <h2 class="section-title">Summary &amp; Top Skills</h2>
+  <!-- Highlight -->
+  <section class="highlight">
+    <div class="highlight-inner">
+      <div class="highlight-column">
+        <h2>What I focus on</h2>
         <p>
-          I am a graduate student in Internet of Things at Northeastern University, focused on building
-          secure and efficient embedded systems. I have designed and implemented FPGA based systems
-          for hardware level security and have hands on experience with microcontrollers such as ESP32,
-          LPC2148, STM32 and ARM Cortex M platforms.
-        </p>
-        <p>
-          I work primarily with C, C++, Embedded C and Verilog, and I enjoy taking systems from schematic
-          and PCB all the way to firmware, testing and deployment. I have led the development of safety
-          critical circuits in real time automotive systems and research projects in hardware security.
+          Embedded C and C++, ESP32, Raspberry Pi, FPGA designs in Verilog,
+          and hardware security primitives such as Physically Unclonable Functions.
         </p>
       </div>
 
-      <div class="summary-skills">
-        <div class="skill-pill">Embedded Systems</div>
-        <div class="skill-pill">FPGA &amp; Verilog</div>
-        <div class="skill-pill">C / C++ / Embedded C</div>
-        <div class="skill-pill">Hardware Security (PUFs)</div>
+      <div class="highlight-column">
+        <h2>How I work</h2>
+        <p>
+          I take ideas from schematic to prototype, validate behavior on real hardware,
+          and iterate until a design is robust and production ready.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="section-inner">
-      <h2 class="section-title">Selected Projects</h2>
+      <h2 class="section-title">Projects</h2>
 
       <div class="cards">
         <article class="card">
           <p class="card-eyebrow">Hardware Security</p>
           <h3 class="card-title">Ring Oscillator PUF on FPGA</h3>
           <p class="card-text">
-            Implemented a Ring Oscillator based Physically Unclonable Function on a Tang Nano 20K FPGA
-            to generate unique device keys without storing secrets in non volatile memory.
+            Implemented a Ring Oscillator based Physically Unclonable Function on Tang Nano 20K FPGA
+            to generate unique device keys without storing secrets in non-volatile memory.
           </p>
-          <ul class="card-list">
-            <li>Designed multiple RO pairs in Verilog and integrated a response selection network.</li>
-            <li>Captured responses over UART and evaluated uniqueness and reliability in MATLAB.</li>
-          </ul>
         </article>
 
         <article class="card">
           <p class="card-eyebrow">Embedded Systems</p>
           <h3 class="card-title">Landmine Detection Robot</h3>
           <p class="card-text">
-            Built a terrain capable robot using an LPC2148 microcontroller that detects buried metallic landmines
-            and reports GPS coordinates via GSM.
+            Built a terrain-capable robot using an LPC2148 microcontroller to detect metallic landmines
+            and report GPS coordinates via GSM.
           </p>
-          <ul class="card-list">
-            <li>Implemented motion and sensing logic in Embedded C.</li>
-            <li>Integrated RF, GPS and GSM modules using UART interfaces.</li>
-          </ul>
         </article>
 
         <article class="card">
           <p class="card-eyebrow">Automotive</p>
-          <h3 class="card-title">Formula SAE BSPD &amp; Wiring Harness</h3>
+          <h3 class="card-title">Formula SAE BSPD & Wiring Harness</h3>
           <p class="card-text">
             Designed the Brake System Plausibility Device and wiring harness for an electric Formula SAE racecar,
             aligned with Formula Bharat safety requirements.
           </p>
-          <ul class="card-list">
-            <li>Created schematics and PCB layout using Proteus and Eagle.</li>
-            <li>Validated signals with DAQ and oscilloscopes during track testing.</li>
-          </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Professional Experience -->
-  <section id="experience" class="section">
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
     <div class="section-inner">
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title">Experience</h2>
 
-      <div class="experience-grid">
-        <div class="experience-item">
-          <div class="experience-number">1</div>
-          <div class="experience-body">
-            <h3 class="experience-role">Purchase Executive</h3>
-            <p class="experience-company">Technocrafts Switchgears · Bhiwandi · Nov 2023 – Jul 2024</p>
-            <p class="experience-text">
-              Procured electrical components including relays, meters, sensors, and surge arrestors,
-              coordinated with 15+ vendors and maintained inventory logs.
-              Gained exposure to switchgear design and electrical component testing.
-            </p>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <h3>Hardware and Network Intern</h3>
+          <span>Broad Net India · Mumbai</span>
         </div>
+        <p class="timeline-text">
+          Configured routers, switches, and fiber equipment for residential and commercial clients,
+          focusing on uptime, packet loss, and secure network access.
+        </p>
+      </div>
 
-        <div class="experience-item">
-          <div class="experience-number">2</div>
-          <div class="experience-body">
-            <h3 class="experience-role">Hardware and Network Engineering Intern</h3>
-            <p class="experience-company">Broad Net India Pvt Ltd · Mumbai · Jan 2023 – Jun 2023</p>
-            <p class="experience-text">
-              Installed and configured network equipment, applied static IP/DNS and firewall settings,
-              and performed firmware updates to improve uptime and reduce downtime.
-            </p>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <h3>Purchase Executive</h3>
+          <span>Technocrafts Switchgears · Bhiwandi</span>
         </div>
+        <p class="timeline-text">
+          Procured relays, meters, sensors, and surge arrestors, coordinated vendor relations,
+          and supported panel assembly and testing workflows.
+        </p>
+      </div>
 
-        <div class="experience-item">
-          <div class="experience-number">3</div>
-          <div class="experience-body">
-            <h3 class="experience-role">Electronics Head</h3>
-            <p class="experience-company">Hyperion Racing · Formula SAE Team · May 2022 – May 2023</p>
-            <p class="experience-text">
-              Spearheaded safety critical systems development including BSPD, ECU tuning and wiring harnesses,
-              leading a team of 9 engineers to deliver real time embedded solutions in race vehicles.
-            </p>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <h3>Electronics Head</h3>
+          <span>Hyperion Racing · Formula SAE</span>
         </div>
+        <p class="timeline-text">
+          Led the electronics subsystem for an electric racecar including BSPD design, ECU integration,
+          wiring harness development, and track-side debugging.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Education & Certifications -->
-  <section id="education" class="section section-alt">
-    <div class="section-inner education-layout">
-      <div>
-        <h2 class="section-title">Education</h2>
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Education</h2>
 
+      <div class="education-grid">
         <div class="education-item">
           <h3>MS in Internet of Things</h3>
           <p class="education-school">Northeastern University · Boston, MA</p>
-          <p class="education-meta">2024 – 2026 (expected)</p>
+          <p>2024 – 2026 (expected)</p>
         </div>
 
         <div class="education-item">
-          <h3>Bachelor of Technology in Electronics &amp; Telecommunications</h3>
+          <h3>BE in Electronics and Telecommunications</h3>
           <p class="education-school">MES Pillai College of Engineering · Mumbai</p>
-          <p class="education-meta">2019 – 2023</p>
+          <p>2019 – 2023</p>
         </div>
-      </div>
-
-      <div>
-        <h2 class="section-title small-title">Certifications</h2>
-        <ul class="cert-list">
-          <li>Digital Circuit Design using Virtual Labs</li>
-          <li>Introduction to the Internet of Things and Embedded Systems</li>
-          <li>C Programming for Embedded Applications</li>
-          <li>IoT Foundations: Fundamentals</li>
-          <li>IoT Wireless &amp; Cloud Computing Emerging Technologies</li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Languages & Contact -->
-  <section id="contact" class="section">
-    <div class="section-inner languages-contact">
-      <div>
-        <h2 class="section-title">Languages</h2>
-        <div class="language-list">
-          <div class="language-card">
-            <div class="language-name">Hindi</div>
-            <div class="language-level">Native or Bilingual</div>
-          </div>
-          <div class="language-card">
-            <div class="language-name">Marathi</div>
-            <div class="language-level">Native or Bilingual</div>
-          </div>
-          <div class="language-card">
-            <div class="language-name">English</div>
-            <div class="language-level">Full Professional</div>
-          </div>
-        </div>
-      </div>
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="section-title">Contact</h2>
 
-      <div>
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-card">
-          <p class="contact-line">
-            Boston, MA, United States
-          </p>
-          <p class="contact-line">
-            <strong>Email</strong><br>
-            <a href="mailto:kale.ath@northeastern.edu">kale.ath@northeastern.edu</a><br>
-            <a href="mailto:atharvakale72@gmail.com">atharvakale72@gmail.com</a>
-          </p>
-          <p class="contact-line">
-            <strong>Links</strong><br>
-            <a href="https://www.linkedin.com/in/atharvapkale" target="_blank" rel="noopener">LinkedIn</a><br>
-            <a href="https://github.com/AtharvaK1810" target="_blank" rel="noopener">GitHub</a>
-          </p>
-        </div>
-      </div>
+      <p>Email: <a href="mailto:kale.ath@northeastern.edu">kale.ath@northeastern.edu</a></p>
+      <p>Location: Boston, MA</p>
     </div>
   </section>
 
@@ -251,7 +183,6 @@
   <footer class="footer">
     <div class="footer-inner">
       <span>© <span id="year"></span> Atharva Prashant Kale</span>
-      <span>Built with GitHub Pages</span>
     </div>
   </footer>
 
