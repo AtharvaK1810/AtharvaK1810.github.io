@@ -1,0 +1,453 @@
+/* ===========================
+   Pastel Neumorphism Theme
+   =========================== */
+
+:root {
+  --pastel-lilac: #d2bee9;
+  --pastel-pink-soft: #ffd6e8;
+  --pastel-pink: #ffb6d8;
+  --pastel-blue-soft: #cfe6ff;
+  --pastel-blue: #a9d4ff;
+
+  --bg: #f7f5ff;
+  --card: #fdfbff;
+  --text-main: #252239;
+  --text-muted: #68647f;
+
+  --shadow-light: rgba(255, 255, 255, 0.85);
+  --shadow-dark: rgba(163, 177, 198, 0.4);
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at left, var(--pastel-lilac) 0, var(--bg) 45%)
+              fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout helpers */
+
+.section,
+.section-alt,
+.highlight,
+.hero {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-inner,
+.highlight-inner,
+.hero-inner,
+.nav-inner,
+.footer-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Neumorphic surfaces */
+
+.neu-surface {
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow:
+    14px 14px 28px var(--shadow-dark),
+    -14px -14px 28px var(--shadow-light);
+}
+
+/* Top nav */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(247, 245, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.nav-inner {
+  padding: 0.65rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--pastel-lilac),
+    var(--pastel-pink-soft)
+  );
+  color: #2b2140;
+  box-shadow:
+    6px 6px 14px rgba(141, 141, 173, 0.4),
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  position: relative;
+  padding-bottom: 0.15rem;
+  transition: color 0.16s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--pastel-pink),
+    var(--pastel-blue)
+  );
+  transition: width 0.18s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-inner {
+  text-align: center;
+  padding: 2.4rem 2rem 2.2rem;
+  border-radius: 30px;
+  background: linear-gradient(
+      135deg,
+      rgba(210, 190, 233, 0.32),
+      rgba(255, 214, 232, 0.3),
+      rgba(169, 212, 255, 0.32)
+    ),
+    var(--card);
+  box-shadow:
+    18px 18px 36px var(--shadow-dark),
+    -18px -18px 36px var(--shadow-light);
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.hero-title {
+  font-size: clamp(2.3rem, 4vw, 3.1rem);
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  margin: 0 auto 1.7rem;
+  max-width: 36rem;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(
+    135deg,
+    var(--pastel-pink),
+    var(--pastel-blue-soft)
+  );
+  color: #2b2340;
+  box-shadow:
+    10px 10px 22px rgba(183, 167, 210, 0.8),
+    -8px -8px 18px rgba(255, 255, 255, 1);
+}
+
+.btn.secondary {
+  background: var(--card);
+  color: var(--text-main);
+  box-shadow:
+    8px 8px 18px var(--shadow-dark),
+    -8px -8px 18px var(--shadow-light);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Highlight */
+
+.highlight {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.highlight-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.highlight-column {
+  padding: 1.6rem 1.7rem;
+}
+
+.highlight-column h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.highlight-column p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Sections */
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-alt {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-title {
+  margin: 0 0 1.6rem;
+  font-size: 1.6rem;
+}
+
+/* Cards (projects) */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+}
+
+.card {
+  padding: 1.6rem 1.6rem 1.45rem;
+}
+
+.card-eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem;
+}
+
+.card-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Experience timeline */
+
+.timeline-item {
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline-header span {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.timeline-text {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Education */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.education-item {
+  padding: 1.5rem 1.6rem;
+}
+
+.education-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.education-school {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.education-item p {
+  margin-top: 0.15rem;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+
+.section-alt .section-inner {
+  /* reuse neumorphic surface */
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.section-alt .section-inner p a {
+  color: #375a9e;
+}
+
+/* Footer */
+
+.footer {
+  padding: 1.1rem 1.5rem 1.4rem;
+}
+
+.footer-inner {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Apply neumorphism to main blocks */
+
+.hero-inner,
+.highlight-column,
+.card,
+.timeline-item,
+.education-item,
+.section-alt .section-inner,
+.section-inner {
+  background: none;
+}
+
+.hero-inner,
+.highlight-column,
+.card,
+.timeline-item,
+.education-item {
+  background: var(--card);
+  box-shadow:
+    14px 14px 28px var(--shadow-dark),
+    -14px -14px 28px var(--shadow-light);
+  border-radius: 24px;
+}
+
+/* Links */
+
+a {
+  color: #375a9e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 0.7rem;
+  }
+
+  .hero-inner {
+    padding: 2rem 1.4rem 1.9rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
