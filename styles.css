@@ -14,6 +14,7 @@
   --shadow-dark: rgba(163, 177, 198, 0.4);
 }
 
+/* Reset */
 
 *,
 *::before,
@@ -36,7 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
+/* Layout helpers */
 
 .section,
 .section-alt,
@@ -55,7 +56,7 @@ body {
   margin: 0 auto;
 }
 
-
+/* Top nav */
 
 .nav {
   position: sticky;
@@ -124,6 +125,8 @@ body {
   width: 100%;
 }
 
+/* Hero */
+
 .hero {
   padding-top: 4.5rem;
   padding-bottom: 3.5rem;
@@ -143,23 +146,6 @@ body {
   box-shadow:
     18px 18px 36px var(--shadow-dark),
     -18px -18px 36px var(--shadow-light);
-}
-
-.hero-photo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.hero-photo img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow:
-    12px 12px 26px rgba(163, 177, 198, 0.35),
-    -12px -12px 26px rgba(255, 255, 255, 0.9);
-  background: var(--card);
 }
 
 .hero-eyebrow {
@@ -189,6 +175,8 @@ body {
   justify-content: center;
   gap: 0.9rem;
 }
+
+/* Buttons */
 
 .btn {
   border-radius: 999px;
@@ -227,6 +215,8 @@ body {
   transform: translateY(-1px);
 }
 
+/* Highlight */
+
 .highlight {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
@@ -253,6 +243,8 @@ body {
   font-size: 0.95rem;
 }
 
+/* Sections */
+
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -268,6 +260,8 @@ body {
   font-size: 1.6rem;
 }
 
+/* Cards */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -278,35 +272,14 @@ body {
   padding: 1.6rem 1.6rem 1.45rem;
 }
 
+/* Experience timeline */
+
 .timeline-item {
   padding: 1.5rem 1.6rem;
   margin-bottom: 1.2rem;
 }
 
-.timeline-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.9rem;
-  align-items: baseline;
-  margin-bottom: 0.3rem;
-}
-
-.timeline-header h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.timeline-header span {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.timeline-text {
-  margin: 0.1rem 0 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
+/* Education */
 
 .education-grid {
   display: grid;
@@ -318,11 +291,14 @@ body {
   padding: 1.5rem 1.6rem;
 }
 
+/* Contact */
 
 .section-alt .section-inner p {
   font-size: 0.95rem;
   color: var(--text-muted);
 }
+
+/* Apply neumorphic surfaces */
 
 .hero-inner,
 .highlight-column,
@@ -336,6 +312,8 @@ body {
   border-radius: 24px;
 }
 
+/* Links */
+
 a {
   color: #375a9e;
   text-decoration: none;
@@ -345,6 +323,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 
 .footer {
   padding: 1.1rem 1.5rem 1.4rem;
@@ -358,6 +337,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
+/* Responsive tweaks */
 
 @media (max-width: 720px) {
   .nav-inner {
