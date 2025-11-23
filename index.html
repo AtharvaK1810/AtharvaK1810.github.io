@@ -26,19 +26,18 @@
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="hero-inner">
-      <div class="hero-photo">
-        <img src="Profile.jpeg" alt="Atharva Prashant Kale">
-      </div>
 
       <p class="hero-eyebrow">Embedded Systems. IoT. FPGA. Hardware Security.</p>
+
       <h1 class="hero-title">Atharva Prashant Kale</h1>
+
       <p class="hero-subtitle">
         Graduate student in Internet of Things at Northeastern University.
         I design secure embedded and IoT systems from hardware to firmware.
       </p>
 
       <div class="hero-actions">
-        <!-- CV filename has spaces, so they are URL-encoded -->
+        <!-- CV filename has spaces, so they must be URL encoded -->
         <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">
           View CV
         </a>
@@ -67,7 +66,7 @@
         <h2>How I work</h2>
         <p>
           I take ideas from schematic to prototype, validate behavior on real hardware,
-          and iterate until the system is robust and production ready.
+          and iterate until a design is robust and production ready.
         </p>
       </div>
     </div>
@@ -83,7 +82,7 @@
           <p class="card-eyebrow">Hardware Security</p>
           <h3 class="card-title">Ring Oscillator PUF on FPGA</h3>
           <p class="card-text">
-            Implemented a Ring Oscillator based Physically Unclonable Function on a Tang Nano 20K FPGA
+            Implemented a Ring Oscillator based Physically Unclonable Function on Tang Nano 20K FPGA
             to generate unique device keys without storing secrets in non-volatile memory.
           </p>
         </article>
@@ -93,7 +92,7 @@
           <h3 class="card-title">Landmine Detection Robot</h3>
           <p class="card-text">
             Built a terrain-capable robot using an LPC2148 microcontroller to detect metallic landmines
-            and report GPS coordinates over GSM.
+            and report GPS coordinates via GSM.
           </p>
         </article>
 
@@ -131,8 +130,8 @@
           <span>Technocrafts Switchgears · Bhiwandi</span>
         </div>
         <p class="timeline-text">
-          Procured electrical components such as relays, meters, and surge arrestors,
-          coordinated with vendors, and supported panel assembly and electrical testing.
+          Procured relays, meters, sensors, and surge arrestors, coordinated vendor relations,
+          and supported panel assembly and testing workflows.
         </p>
       </div>
 
@@ -142,7 +141,7 @@
           <span>Hyperion Racing · Formula SAE</span>
         </div>
         <p class="timeline-text">
-          Led the electronics subsystem for an electric racecar, including BSPD design, ECU integration,
+          Led the electronics subsystem for an electric racecar including BSPD design, ECU integration,
           wiring harness development, and track-side debugging.
         </p>
       </div>
@@ -190,5 +189,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
