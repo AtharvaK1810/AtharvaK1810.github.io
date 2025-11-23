@@ -1,3 +1,7 @@
+/* ===========================
+   Pastel Neumorphism Theme
+   =========================== */
+
 :root {
   --pastel-lilac: #d2bee9;
   --pastel-pink-soft: #ffd6e8;
@@ -285,6 +289,44 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.skills-column {
+  padding: 1.4rem 1.5rem;
+}
+
+.skills-column h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: linear-gradient(
+    130deg,
+    var(--pastel-blue-soft),
+    var(--pastel-pink-soft)
+  );
+  color: #252239;
+  box-shadow:
+    8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+}
+
 /* Cards */
 
 .cards {
@@ -295,6 +337,25 @@ body {
 
 .card {
   padding: 1.6rem 1.6rem 1.45rem;
+}
+
+.card-eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem;
+}
+
+.card-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 /* Experience timeline */
@@ -367,7 +428,8 @@ body {
 .highlight-column,
 .card,
 .timeline-item,
-.education-item {
+.education-item,
+.skills-column {
   background: var(--card);
   box-shadow:
     10px 10px 22px var(--shadow-dark),
