@@ -8,7 +8,7 @@
   --bg: #f7f5ff;
   --card: #fdfbff;
   --text-main: #252239;
-  --text-muted: #68647f;
+  --text-muted: #55526e;
 
   --shadow-light: rgba(255, 255, 255, 0.85);
   --shadow-dark: rgba(163, 177, 198, 0.4);
@@ -28,6 +28,12 @@ body {
   padding: 0;
 }
 
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Helvetica Neue", Arial, sans-serif;
@@ -35,6 +41,24 @@ body {
   background: radial-gradient(circle at left, var(--pastel-lilac) 0, var(--bg) 45%)
               fixed;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #ffffff;
+  border-radius: 999px;
+  border: 1px solid var(--pastel-blue-soft);
+  color: var(--text-main);
+  z-index: 100;
+}
+
+.skip-link:focus-visible {
+  left: 0.5rem;
 }
 
 /* Layout helpers */
@@ -258,6 +282,7 @@ body {
 .section-title {
   margin: 0 0 1.6rem;
   font-size: 1.6rem;
+  letter-spacing: -0.01em;
 }
 
 /* Cards */
@@ -279,6 +304,37 @@ body {
   margin-bottom: 1.2rem;
 }
 
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline-header span {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.timeline-text {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.timeline-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 /* Education */
 
 .education-grid {
@@ -298,21 +354,28 @@ body {
   color: var(--text-muted);
 }
 
-/* Apply neumorphic surfaces */
+/* Neumorphic surfaces with hierarchy */
 
-.hero-inner,
+.hero-inner {
+  background: var(--card);
+  box-shadow:
+    18px 18px 36px var(--shadow-dark),
+    -18px -18px 36px var(--shadow-light);
+  border-radius: 30px;
+}
+
 .highlight-column,
 .card,
 .timeline-item,
 .education-item {
   background: var(--card);
   box-shadow:
-    14px 14px 28px var(--shadow-dark),
-    -14px -14px 28px var(--shadow-light);
+    10px 10px 22px var(--shadow-dark),
+    -10px -10px 22px var(--shadow-light);
   border-radius: 24px;
 }
 
-/* Links */
+/* Links and focus states */
 
 a {
   color: #375a9e;
@@ -321,6 +384,13 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--pastel-blue);
+  outline-offset: 3px;
 }
 
 /* Footer */
@@ -342,8 +412,12 @@ a:hover {
 @media (max-width: 720px) {
   .nav-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.35rem;
+  }
+
+  .nav-links {
+    text-align: center;
   }
 
   .nav-links a {
@@ -358,5 +432,17 @@ a:hover {
   .footer-inner {
     flex-direction: column;
     gap: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-inner,
+  .hero-inner {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
   }
 }
