@@ -1,223 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Atharva Prashant Kale</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Atharva Prashant Kale, Embedded Systems and IoT Engineer.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atharva Prashant Kale</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- Top navigation -->
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="nav-logo">Atharva</div>
-      <nav class="nav-links">
-        <a href="#hero">Overview</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">Atharva</div>
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="hero-inner">
-      <div class="hero-grid">
+    <!-- Hero Section -->
+    <section id="overview" class="hero">
 
-        <!-- Profile photo card -->
-        <div class="hero-photo-card">
-          <img
-            src="PROFILE%20PIC.jpeg"
-            alt="Atharva Prashant Kale"
-            class="hero-photo"
-          >
+        <!-- Profile Photo Card -->
+        <div class="photo-card">
+            <img src="PROFILE PIC.jpeg" alt="Profile photo of Atharva">
         </div>
 
-        <!-- Text content -->
+        <!-- Main Content -->
         <div class="hero-content">
-          <p class="hero-eyebrow">Embedded Systems. IoT. FPGA. Hardware Security.</p>
+            <p class="hero-subtitle">EMBEDDED SYSTEMS. IOT. FPGA. HARDWARE SECURITY.</p>
+            <h1 class="hero-title">Atharva Prashant Kale</h1>
+            <p class="hero-description">
+                Graduate student in Internet of Things at Northeastern University.  
+                I design secure embedded and IoT systems from hardware to firmware.
+            </p>
 
-          <h1 class="hero-title">Atharva Prashant Kale</h1>
-
-          <p class="hero-subtitle">
-            Graduate student in Internet of Things at Northeastern University.
-            I design secure embedded and IoT systems from hardware to firmware.
-          </p>
-
-          <div class="hero-actions">
-            <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">
-              View CV
-            </a>
-            <a href="https://github.com/AtharvaK1810" class="btn secondary" target="_blank" rel="noopener">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/atharvapkale" class="btn secondary" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-          </div>
+            <div class="hero-buttons">
+                <a href="CV Atharva Prashant Kale.pdf" class="btn primary">View CV</a>
+                <a href="https://github.com/AtharvaK1810" class="btn">GitHub</a>
+                <a href="https://linkedin.com/in/atharvakale1810" class="btn">LinkedIn</a>
+            </div>
         </div>
 
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Highlight -->
-  <section class="highlight">
-    <div class="highlight-inner">
-      <div class="highlight-column">
+    <!-- WHAT I FOCUS ON -->
+    <section class="focus-section">
         <h2>What I focus on</h2>
         <p>
-          Embedded C and C++, ESP32, Raspberry Pi, FPGA designs in Verilog,
-          and hardware security primitives such as Physically Unclonable Functions.
+            Hardware security, FPGA design, embedded C, IoT systems,
+            security primitives such as Physically Unclonable Functions.
         </p>
-      </div>
+    </section>
 
-      <div class="highlight-column">
-        <h2>How I work</h2>
-        <p>
-          I take ideas from schematic to prototype, validate behavior on real hardware,
-          and iterate until a design is robust and production ready.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="section-inner">
-      <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
 
-      <div class="cards">
+            <!-- FPGA PUF -->
+            <div class="project-card">
+                <p class="project-category">HARDWARE SECURITY</p>
+                <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF" class="project-title-link">
+                    <h3 class="project-title">Ring Oscillator PUF on FPGA</h3>
+                </a>
+                <p>
+                    Implemented a Ring Oscillator based Physically Unclonable Function
+                    on Tang Nano 20K FPGA to generate unique device keys without storing
+                    secrets in non-volatile memory.
+                </p>
+            </div>
 
-        <!-- Project 1 (linked to FPGA repo) -->
-        <article class="card">
-          <p class="card-eyebrow">Hardware Security</p>
-          <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF"
-               target="_blank" rel="noopener" class="project-link">
-              Ring Oscillator PUF on FPGA
-            </a>
-          </h3>
-          <p class="card-text">
-            Implemented a Ring Oscillator based Physically Unclonable Function on Tang Nano 20K FPGA
-            to generate unique device keys without storing secrets in non-volatile memory.
-          </p>
-        </article>
+            <!-- Landmine Robot -->
+            <div class="project-card">
+                <p class="project-category">EMBEDDED SYSTEMS</p>
+                <h3 class="project-title">Landmine Detection Robot</h3>
+                <p>
+                    Built a terrain-capable robot using an LPC2148 microcontroller to detect
+                    metallic landmines and report GPS coordinates via GSM.
+                </p>
+            </div>
 
-        <!-- Project 2 -->
-        <article class="card">
-          <p class="card-eyebrow">Embedded Systems</p>
-          <h3 class="card-title">Landmine Detection Robot</h3>
-          <p class="card-text">
-            Built a terrain-capable robot using an LPC2148 microcontroller to detect metallic landmines
-            and report GPS coordinates via GSM.
-          </p>
-        </article>
+            <!-- FSAE BSPD -->
+            <div class="project-card">
+                <p class="project-category">AUTOMOTIVE</p>
+                <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team" class="project-title-link">
+                    <h3 class="project-title">Formula SAE BSPD and Wiring Harness</h3>
+                </a>
+                <p>
+                    Designed the Brake System Plausibility Device and wiring harness for an electric
+                    Formula SAE racecar, aligned with Formula Bharat safety requirements.
+                </p>
+            </div>
 
-        <!-- Project 3 (linked to Hyperion repo) -->
-        <article class="card">
-          <p class="card-eyebrow">Automotive</p>
-          <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team"
-               target="_blank" rel="noopener" class="project-link">
-              Formula SAE BSPD and Wiring Harness
-            </a>
-          </h3>
-          <p class="card-text">
-            Designed the Brake System Plausibility Device and wiring harness for an
-            electric Formula SAE racecar, aligned with Formula Bharat safety requirements.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Hardware and Network Intern</h3>
-          <span>Broad Net India · Mumbai</span>
         </div>
-        <p class="timeline-text">
-          Configured routers, switches, and fiber equipment for residential and commercial clients,
-          focusing on uptime, packet loss, and secure network access.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Purchase Executive</h3>
-          <span>Technocrafts Switchgears · Bhiwandi</span>
-        </div>
-        <p class="timeline-text">
-          Procured relays, meters, sensors, and surge arrestors, coordinated vendor relations,
-          and supported panel assembly and testing workflows.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Electronics Head</h3>
-          <span>Hyperion Racing · Formula SAE</span>
-        </div>
-        <p class="timeline-text">
-          Led the electronics subsystem for an electric racecar including BSPD design, ECU integration,
-          wiring harness development, and track-side debugging.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="section">
-    <div class="section-inner">
-      <h2 class="section-title">Education</h2>
-
-      <div class="education-grid">
-        <div class="education-item">
-          <h3>MS in Internet of Things</h3>
-          <p class="education-school">Northeastern University · Boston, MA</p>
-          <p>2024 – 2026 (expected)</p>
-        </div>
-
-        <div class="education-item">
-          <h3>BE in Electronics and Telecommunications</h3>
-          <p class="education-school">MES Pillai College of Engineering · Mumbai</p>
-          <p>2019 – 2023</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">Contact</h2>
-
-      <p>Email: <a href="mailto:kale.ath@northeastern.edu">kale.ath@northeastern.edu</a></p>
-      <p>Location: Boston, MA</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>© <span id="year"></span> Atharva Prashant Kale</span>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    </section>
 
 </body>
 </html>
