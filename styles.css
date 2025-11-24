@@ -156,22 +156,27 @@ body {
   flex-wrap: wrap;
 }
 
+/* Photo card: constrained size, rounded corners, subtle shadow */
+
 .hero-photo-card {
-  flex: 0 0 220px;
-  max-width: 230px;
-  background: var(--card);
+  flex: 0 0 240px;
+  max-width: 240px;
+  max-height: 280px;
+  padding: 0.6rem;
   border-radius: 24px;
-  padding: 0.75rem;
+  background: var(--card);
   box-shadow:
     10px 10px 20px rgba(163, 177, 198, 0.45),
     -8px -8px 18px rgba(255, 255, 255, 0.9);
+  overflow: hidden;
 }
 
 .hero-photo {
   width: 100%;
-  display: block;
-  border-radius: 20px;
+  height: 100%;
+  border-radius: 18px;
   object-fit: cover;
+  display: block;
 }
 
 .hero-content {
@@ -344,7 +349,7 @@ body {
   border-radius: 24px;
 }
 
-/* Default links */
+/* Links */
 
 a {
   color: #375a9e;
@@ -355,7 +360,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Override project title links to keep them dark, not blue */
+/* Project title links should stay dark, not blue */
 
 .card-title .project-link {
   color: var(--text-main);
