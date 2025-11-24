@@ -120,7 +120,8 @@ body {
   width: 100%;
 }
 
-/* Hero container with photo + content */
+/* Hero */
+
 .hero {
   padding-top: 4.5rem;
   padding-bottom: 3.5rem;
@@ -129,7 +130,7 @@ body {
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.4rem;
   padding: 2.4rem 2rem 2.2rem;
   border-radius: 30px;
   background: linear-gradient(
@@ -141,27 +142,31 @@ body {
     var(--card);
   box-shadow: 18px 18px 36px var(--shadow-dark),
     -18px -18px 36px var(--shadow-light);
+  flex-wrap: wrap;
 }
 
-/* Profile photo */
-.hero-photo {
+/* Photo on the left */
+
+.hero-media {
   flex: 0 0 230px;
-  display: flex;
-  justify-content: center;
+  max-width: 230px;
 }
 
-.hero-photo img {
+.hero-photo {
   width: 100%;
+  height: auto;
   max-height: 260px;
   object-fit: cover;
   border-radius: 22px;
   box-shadow: 10px 10px 20px rgba(163, 177, 198, 0.45),
     -6px -6px 16px rgba(255, 255, 255, 0.9);
+  display: block;
 }
 
-/* Hero text */
+/* Text on the right */
+
 .hero-content {
-  flex: 1;
+  flex: 1 1 260px;
   text-align: left;
 }
 
@@ -180,7 +185,7 @@ body {
 }
 
 .hero-subtitle {
-  margin: 0 auto 1.7rem;
+  margin: 0 0 1.7rem;
   max-width: 36rem;
   font-size: 0.98rem;
   color: var(--text-muted);
@@ -189,7 +194,7 @@ body {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: flex-start;
   gap: 0.9rem;
 }
 
@@ -239,9 +244,29 @@ body {
   gap: 1.8rem;
 }
 
-/* Projects Section */
+.highlight-column {
+  padding: 1.6rem 1.7rem;
+}
+
+.highlight-column h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.highlight-column p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Sections */
 
 .section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-alt {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -250,6 +275,8 @@ body {
   margin: 0 0 1.6rem;
   font-size: 1.6rem;
 }
+
+/* Cards */
 
 .cards {
   display: grid;
@@ -261,7 +288,7 @@ body {
   padding: 1.6rem 1.6rem 1.45rem;
 }
 
-/* Timeline */
+/* Experience timeline */
 
 .timeline-item {
   padding: 1.5rem 1.6rem;
@@ -280,7 +307,7 @@ body {
   padding: 1.5rem 1.6rem;
 }
 
-/* Neumorphic surfaces */
+/* Apply neumorphic surfaces */
 
 .hero-inner,
 .highlight-column,
@@ -291,6 +318,28 @@ body {
   box-shadow: 14px 14px 28px var(--shadow-dark),
     -14px -14px 28px var(--shadow-light);
   border-radius: 24px;
+}
+
+/* Links */
+
+/* Default links (emails etc) can stay blueish */
+a {
+  color: #375a9e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Project title links should look like headings, not blue */
+.project-link {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -307,7 +356,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Mobile adjustments */
+/* Responsive tweaks */
 
 @media (max-width: 720px) {
   .nav-inner {
@@ -323,20 +372,27 @@ body {
 
   .hero-inner {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .hero-photo {
+  .hero-media {
     flex: none;
     width: 70%;
-  }
-
-  .hero-photo img {
-    max-height: 220px;
+    max-width: 260px;
   }
 
   .hero-content {
     text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
 
   .footer-inner {
