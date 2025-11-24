@@ -5,18 +5,9 @@
   <title>Atharva Prashant Kale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Atharva Prashant Kale, Embedded Systems and IoT Engineer.">
-
-  <!-- Open Graph for better sharing -->
-  <meta property="og:title" content="Atharva Prashant Kale - Embedded Systems and IoT">
-  <meta property="og:description" content="Graduate student in Internet of Things at Northeastern University, focusing on embedded systems, FPGA design and hardware security.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://atharvak1810.github.io/">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <a href="#hero" class="skip-link">Skip to main content</a>
 
   <!-- Top navigation -->
   <header class="nav">
@@ -24,7 +15,6 @@
       <div class="nav-logo">Atharva</div>
       <nav class="nav-links">
         <a href="#hero">Overview</a>
-        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
@@ -47,7 +37,6 @@
       </p>
 
       <div class="hero-actions">
-        <!-- CV filename has spaces, so they must be URL encoded -->
         <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">
           View CV
         </a>
@@ -82,61 +71,14 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">Skills</h2>
-
-      <div class="skills-grid">
-        <div class="skills-column">
-          <h3>Embedded and Firmware</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Embedded C</span>
-            <span class="skill-tag">FreeRTOS</span>
-          </div>
-        </div>
-
-        <div class="skills-column">
-          <h3>Hardware and FPGA</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Verilog</span>
-            <span class="skill-tag">FPGA (Tang Nano 20K)</span>
-            <span class="skill-tag">Digital Design</span>
-            <span class="skill-tag">Hardware Security (PUFs)</span>
-          </div>
-        </div>
-
-        <div class="skills-column">
-          <h3>Microcontrollers and Platforms</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">ESP32</span>
-            <span class="skill-tag">ARM Cortex M</span>
-            <span class="skill-tag">LPC2148</span>
-            <span class="skill-tag">Raspberry Pi</span>
-          </div>
-        </div>
-
-        <div class="skills-column">
-          <h3>Tools and Protocols</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">UART</span>
-            <span class="skill-tag">SPI</span>
-            <span class="skill-tag">I2C</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Projects -->
   <section id="projects" class="section">
     <div class="section-inner">
       <h2 class="section-title">Projects</h2>
 
       <div class="cards">
+
+        <!-- Project 1 -->
         <article class="card">
           <p class="card-eyebrow">Hardware Security</p>
           <h3 class="card-title">Ring Oscillator PUF on FPGA</h3>
@@ -146,6 +88,7 @@
           </p>
         </article>
 
+        <!-- Project 2 -->
         <article class="card">
           <p class="card-eyebrow">Embedded Systems</p>
           <h3 class="card-title">Landmine Detection Robot</h3>
@@ -155,14 +98,23 @@
           </p>
         </article>
 
+        <!-- Project 3 (UPDATED WITH LINK) -->
         <article class="card">
           <p class="card-eyebrow">Automotive</p>
-          <h3 class="card-title">Formula SAE BSPD and Wiring Harness</h3>
+
+          <!-- Hyperlinked title EXACTLY as requested -->
+          <h3 class="card-title">
+            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team" target="_blank" rel="noopener" class="project-link">
+              Formula SAE BSPD and Wiring Harness
+            </a>
+          </h3>
+
           <p class="card-text">
-            Designed the Brake System Plausibility Device and wiring harness for an electric Formula SAE racecar,
-            aligned with Formula Bharat safety requirements.
+            Designed the Brake System Plausibility Device and wiring harness for an
+            electric Formula SAE racecar, aligned with Formula Bharat safety requirements.
           </p>
         </article>
+
       </div>
     </div>
   </section>
@@ -177,10 +129,10 @@
           <h3>Hardware and Network Intern</h3>
           <span>Broad Net India · Mumbai</span>
         </div>
-        <ul class="timeline-list">
-          <li>Configured routers, switches and fiber equipment for residential and commercial clients.</li>
-          <li>Improved network reliability by tuning configuration for uptime and packet loss.</li>
-        </ul>
+        <p class="timeline-text">
+          Configured routers, switches, and fiber equipment for residential and commercial clients,
+          focusing on uptime, packet loss, and secure network access.
+        </p>
       </div>
 
       <div class="timeline-item">
@@ -188,10 +140,10 @@
           <h3>Purchase Executive</h3>
           <span>Technocrafts Switchgears · Bhiwandi</span>
         </div>
-        <ul class="timeline-list">
-          <li>Procured relays, meters, sensors and surge arrestors from more than 15 vendors.</li>
-          <li>Maintained inventory logs and supported panel assembly and testing workflows.</li>
-        </ul>
+        <p class="timeline-text">
+          Procured relays, meters, sensors, and surge arrestors, coordinated vendor relations,
+          and supported panel assembly and testing workflows.
+        </p>
       </div>
 
       <div class="timeline-item">
@@ -199,10 +151,10 @@
           <h3>Electronics Head</h3>
           <span>Hyperion Racing · Formula SAE</span>
         </div>
-        <ul class="timeline-list">
-          <li>Led the electronics subsystem for an electric racecar including BSPD design and ECU integration.</li>
-          <li>Developed and debugged wiring harnesses and sensors during testing and competition.</li>
-        </ul>
+        <p class="timeline-text">
+          Led the electronics subsystem for an electric racecar including BSPD design, ECU integration,
+          wiring harness development, and track-side debugging.
+        </p>
       </div>
     </div>
   </section>
@@ -216,13 +168,13 @@
         <div class="education-item">
           <h3>MS in Internet of Things</h3>
           <p class="education-school">Northeastern University · Boston, MA</p>
-          <p>2024 - 2026 (expected)</p>
+          <p>2024 – 2026 (expected)</p>
         </div>
 
         <div class="education-item">
           <h3>BE in Electronics and Telecommunications</h3>
           <p class="education-school">MES Pillai College of Engineering · Mumbai</p>
-          <p>2019 - 2023</p>
+          <p>2019 – 2023</p>
         </div>
       </div>
     </div>
