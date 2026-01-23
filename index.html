@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Atharva Prashant Kale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Atharva Prashant Kale, Embedded Systems & Network Engineer.">
+  <meta name="description" content="Portfolio of Atharva Prashant Kale, Embedded Systems and IoT Engineer.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,10 +15,9 @@
       <nav class="nav-links">
         <a href="#hero">Overview</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -36,13 +35,13 @@
       </div>
 
       <div class="hero-content">
-        <p class="hero-eyebrow">Embedded Systems, Network Engineering & Industrial Automation</p>
+        <p class="hero-eyebrow">Embedded Systems. IoT. FPGA. Hardware Security.</p>
 
         <h1 class="hero-title">Atharva Prashant Kale</h1>
 
         <p class="hero-subtitle">
-          Graduate student in Internet of Things at Northeastern University and Highway Engineering Co-op at MassDOT.
-          I specialize in secure firmware development, fault-tolerant network architecture, and protocol validation.
+          Graduate student in Internet of Things at Northeastern University.
+          I design secure embedded and IoT systems from hardware to firmware.
         </p>
 
         <div class="hero-actions">
@@ -65,16 +64,16 @@
       <div class="highlight-column">
         <h2>What I focus on</h2>
         <p>
-          Embedded Firmware (C/C++, Verilog), Network Reliability (TCP/IP, Python Automation), 
-          and Industrial Control Systems (PLC, SCADA, EtherNet/IP).
+          Embedded C and C++, ESP32, Raspberry Pi, FPGA designs in Verilog,
+          and hardware security primitives such as Physically Unclonable Functions.
         </p>
       </div>
 
       <div class="highlight-column">
         <h2>How I work</h2>
         <p>
-          I bridge the gap between silicon and systems—designing secure hardware primitives, 
-          validating network protocols, and engineering fail-safe automation architectures.
+          I take ideas from schematic to prototype, validate behavior on real hardware,
+          and iterate until a design is robust and production ready.
         </p>
       </div>
     </div>
@@ -86,29 +85,74 @@
 
       <div class="education-grid">
         <div class="education-item">
-          <h3>Languages & Scripting</h3>
-          <p>C, C++, Embedded C, Verilog, Python (Pandas/Scapy), MATLAB, Bash, Ladder Logic</p>
+          <h3>Programming Languages &amp; Scripting</h3>
+          <p>C, C++, Embedded C, Python, Verilog, VHDL, Assembly, PLC Ladder Logic</p>
         </div>
 
         <div class="education-item">
-          <h3>Networking & Protocols</h3>
-          <p>TCP/IP, UDP, EtherNet/IP, DLR, MQTT, CoAP, Wireshark, I2C, SPI, UART</p>
+          <h3>IoT &amp; Communication Protocols</h3>
+          <p>MQTT, CoAP, TCP/IP, EtherNet/IP, DLR, ControlNet, I2C, SPI, UART</p>
         </div>
 
         <div class="education-item">
-          <h3>Microcontrollers & FPGA</h3>
-          <p>ESP32, Raspberry Pi, Tang Nano 20K (GOWIN), Xilinx FPGA, ARM Cortex-M</p>
+          <h3>Microcontrollers &amp; Platforms</h3>
+          <p>ESP32, Raspberry Pi, LPC2148, MSP430, Arduino, Xilinx FPGAs, Tang Nano, ARM</p>
         </div>
 
         <div class="education-item">
-          <h3>Hardware & Tools</h3>
-          <p>Oscilloscope, Logic Analyzer, SolidWorks Electrical, Altium Designer, Git, Linux</p>
+          <h3>Hardware &amp; PCB Design</h3>
+          <p>PCB design (Altium, EagleCAD, KiCad), schematic capture, circuit simulation, oscilloscope debugging</p>
         </div>
 
         <div class="education-item">
-          <h3>Industrial Systems</h3>
-          <p>Allen-Bradley ControlLogix, SCADA (Honeywell IPCS), Modbus, Factory I/O</p>
+          <h3>EDA &amp; Automation Tools</h3>
+          <p>Studio 5000 Logix Designer, Xilinx Vivado, GOWIN IDE, MATLAB, AutoCAD, Factory I/O</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card-eyebrow">Hardware Security</p>
+          <h3 class="card-title">
+            <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF"
+               target="_blank" rel="noopener" class="project-link">
+              Ring Oscillator PUF on FPGA
+            </a>
+          </h3>
+          <p class="card-text">
+            Implemented a Ring Oscillator based Physically Unclonable Function on Tang Nano 20K FPGA
+            to generate unique device keys without storing secrets in non-volatile memory.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-eyebrow">Embedded Systems</p>
+          <h3 class="card-title">Landmine Detection Robot</h3>
+          <p class="card-text">
+            Built a terrain-capable robot using an LPC2148 microcontroller to detect metallic landmines
+            and report GPS coordinates via GSM.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="card-eyebrow">Automotive</p>
+          <h3 class="card-title">
+            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team"
+               target="_blank" rel="noopener" class="project-link">
+              Formula SAE BSPD and Wiring Harness
+            </a>
+          </h3>
+          <p class="card-text">
+            Designed the Brake System Plausibility Device and wiring harness for an electric Formula SAE racecar,
+            aligned with Formula Bharat safety requirements.
+          </p>
+        </article>
       </div>
     </div>
   </section>
@@ -120,89 +164,48 @@
       <div class="timeline-item">
         <div class="timeline-header">
           <h3>Highway Engineering Co-op</h3>
-          <span>MassDOT · Boston, MA · Jan 2026 – Present</span>
+          <span>MassDOT · Boston, MA (Jan 2026 – Present)</span>
         </div>
         <p class="timeline-text">
-          Engineered fault-tolerant Device Level Ring (DLR) topologies ensuring &lt;1ms network recovery. 
-          Migrated legacy ControlNet PLCs to EtherNet/IP across 10+ locations and validated ruggedized hardware for tunnel ventilation.
+          <strong>Network Architecture:</strong> Designing the migration of legacy ControlNet tunnel infrastructure to modern EtherNet/IP Fiber rings using <strong>Stratix 5800</strong> switches and <strong>1756-EN2TR</strong> modules.
+          <br><br>
+          <strong>Systems Integration:</strong> Managing firmware upgrades for redundant ControlLogix systems (Studio 5000) and configuring Add-On Profiles (AOP) for seamless SCADA integration.
+          <br><br>
+          <strong>Diagnostics:</strong> Performing RLC health analysis on 460V motors using Megger ADX6 and auditing legacy hardware (1771 I/O, Emerson RX3i) for modernization.
         </p>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-header">
           <h3>Hardware and Network Intern</h3>
-          <span>Broad Net India · Mumbai · Jan 2023 – Jun 2023</span>
+          <span>Broad Net India · Mumbai</span>
         </div>
         <p class="timeline-text">
-          Configured TCP/IP routing tables and DNS settings for edge devices, analyzing traffic logs to reduce packet loss to &lt;1%. 
-          Validated fiber-optic link integrity against ISP Service Level Agreements.
+          Configured routers, switches, and fiber equipment for residential and commercial clients,
+          focusing on uptime, packet loss, and secure network access.
         </p>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-header">
           <h3>Purchase Executive</h3>
-          <span>Technocrafts Switchgears · Bhiwandi · May 2023 – Jul 2023</span>
+          <span>Technocrafts Switchgears · Bhiwandi</span>
         </div>
         <p class="timeline-text">
-          Procured high-voltage components (relays, sensors), managed vendor relations,
-          and supported panel assembly testing workflows for industrial switchgear.
+          Procured relays, meters, sensors, and surge arrestors, coordinated vendor relations,
+          and supported panel assembly and testing workflows.
         </p>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-header">
           <h3>Electronics Head</h3>
-          <span>Hyperion Racing · Formula SAE · Jun 2022 – Apr 2023</span>
+          <span>Hyperion Racing · Formula SAE</span>
         </div>
         <p class="timeline-text">
-          Led electronics subsystem design for a combustion racecar. Debugged in-track electrical faults 
-          and coordinated sensor calibration with the powertrain team.
+          Led the electronics subsystem for an electric racecar including BSPD design, ECU integration,
+          wiring harness development, and track-side debugging.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="section-inner">
-      <h2 class="section-title">Projects</h2>
-
-      <div class="cards">
-        <article class="card">
-          <p class="card-eyebrow">Hardware Security (FPGA) · Jan – Apr 2025</p>
-          <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF"
-               target="_blank" rel="noopener" class="project-link">
-              Ring Oscillator PUF for Secure Keys
-            </a>
-          </h3>
-          <p class="card-text">
-            Designed a silicon-based security primitive on Tang Nano 20K FPGA using Verilog.
-            Achieved 85% entropy and 95% reliability by synthesizing 128 ring oscillator pairs.
-          </p>
-        </article>
-
-        <article class="card">
-          <p class="card-eyebrow">Embedded Automotive · May 2022 – Feb 2023</p>
-          <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team"
-               target="_blank" rel="noopener" class="project-link">
-              Formula SAE Safety Logic (BSPD)
-            </a>
-          </h3>
-          <p class="card-text">
-            Designed a Brake System Plausibility Device using discrete logic to automatically cut ignition
-            during faults. Developed complete wiring harnesses in SolidWorks Electrical.
-          </p>
-        </article>
-
-        <article class="card">
-          <p class="card-eyebrow">Robotics & IoT · Jan – May 2023</p>
-          <h3 class="card-title">Landmine Detection Robot</h3>
-          <p class="card-text">
-            Built a terrain-capable robot using an LPC2148 microcontroller to detect metallic signatures
-            and transmit GPS coordinates via GSM/UART protocols.
-          </p>
-        </article>
       </div>
     </div>
   </section>
@@ -222,38 +225,6 @@
           <h3>BE in Electronics and Telecommunications</h3>
           <p class="education-school">MES Pillai College of Engineering · Mumbai</p>
           <p>2019 – 2023</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="certifications" class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">Certifications</h2>
-
-      <div class="education-grid">
-        <div class="education-item">
-          <h3>PLC Ladder Logic: The Basics</h3>
-          <p class="education-school">LinkedIn Learning · Jan 2026</p>
-          <p>Fundamental programming structures for Industrial Automation (IEC 61131-3).</p>
-        </div>
-
-        <div class="education-item">
-          <h3>C Programming for Embedded Applications</h3>
-          <p class="education-school">LinkedIn Learning · May 2025</p>
-          <p>Memory management, pointers, and hardware-level programming for microcontrollers.</p>
-        </div>
-
-        <div class="education-item">
-          <h3>Digital Circuit Design</h3>
-          <p class="education-school">IEEE PCE · Aug 2020</p>
-          <p>Logic gate design, boolean algebra, and circuit simulation fundamentals.</p>
-        </div>
-
-        <div class="education-item">
-          <h3>Networking Foundations</h3>
-          <p class="education-school">LinkedIn Learning · Jan 2026</p>
-          <p>OSI Model, TCP/IP addressing, subnets, and routing protocols.</p>
         </div>
       </div>
     </div>
