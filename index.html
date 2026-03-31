@@ -5,7 +5,256 @@
   <title>Atharva Prashant Kale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Atharva Prashant Kale, Systems Engineer specializing in Embedded Systems, Industrial IoT, and Robotics Deployment.">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --lavender-light: #E6E4F4;
+      --lavender-mid:   #C8C4E3;
+      --lavender-deep:  #A8A3CF;
+      --bg: #f7f5ff;
+      --card: #fdfbff;
+      --text-main: #252239;
+      --text-muted: #68647f;
+      --shadow-light: rgba(255, 255, 255, 0.9);
+      --shadow-dark: rgba(154, 167, 191, 0.32);
+    }
+
+    :root.theme-neutral {
+      --lavender-light: #E3E5F5;
+      --lavender-mid:   #BFC4E6;
+      --lavender-deep:  #969DCE;
+      --shadow-light: rgba(255, 255, 255, 0.9);
+      --shadow-dark: rgba(137, 152, 184, 0.34);
+    }
+
+    :root.theme-rich {
+      --lavender-light: #DCD7F5;
+      --lavender-mid:   #ABA2E4;
+      --lavender-deep:  #7F73C8;
+      --shadow-light: rgba(255, 255, 255, 0.92);
+      --shadow-dark: rgba(111, 118, 170, 0.4);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-main);
+      background: radial-gradient(circle at left, var(--lavender-light) 0, var(--bg) 45%) fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .section, .section-alt, .highlight, .hero {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-inner, .highlight-inner, .hero-inner, .nav-inner, .footer-inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 245, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-inner {
+      padding: 0.65rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--lavender-mid), var(--lavender-light));
+      color: #2b2140;
+      box-shadow: 6px 6px 14px rgba(141, 141, 173, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      position: relative;
+      padding-bottom: 0.15rem;
+      transition: color 0.16s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.1rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--lavender-mid), var(--lavender-deep));
+      transition: width 0.18s ease;
+    }
+
+    .nav-links a:hover { color: var(--text-main); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* HERO */
+    .hero { padding-top: 4.5rem; padding-bottom: 3.5rem; }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      padding: 2.4rem 2rem 2.2rem;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(230,228,244,0.40), rgba(200,196,227,0.32), rgba(168,163,207,0.34)), var(--card);
+      box-shadow: 16px 16px 32px var(--shadow-dark), -16px -16px 32px var(--shadow-light);
+      flex-wrap: wrap;
+    }
+
+    .hero-media { flex: 0 0 230px; max-width: 230px; }
+
+    .hero-photo {
+      width: 100%;
+      height: auto;
+      max-height: 260px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 10px 10px 20px rgba(163,177,198,0.42), -6px -6px 16px rgba(255,255,255,0.96);
+      display: block;
+    }
+
+    .hero-content { flex: 1 1 260px; text-align: left; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title { font-size: clamp(2.3rem, 4vw, 3.1rem); margin: 0 0 0.6rem; letter-spacing: -0.03em; }
+    .hero-subtitle { margin: 0 0 1.7rem; max-width: 36rem; font-size: 0.98rem; color: var(--text-muted); }
+
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.9rem; }
+
+    /* BUTTONS */
+    .btn {
+      border-radius: 999px;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, filter 0.18s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--lavender-mid), var(--lavender-deep));
+      color: #2b2340;
+      box-shadow: 10px 10px 22px rgba(183,167,210,0.8), -8px -8px 18px rgba(255,255,255,1);
+    }
+
+    .btn.secondary {
+      background: var(--card);
+      color: var(--text-main);
+      box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+    }
+
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.02); }
+
+    .btn.primary:hover {
+      background: linear-gradient(135deg, var(--lavender-deep), var(--lavender-mid));
+      box-shadow: 12px 12px 26px rgba(171,157,210,0.9), -9px -9px 20px rgba(255,255,255,1);
+    }
+
+    .btn.secondary:hover {
+      background: #f3f1ff;
+      box-shadow: 9px 9px 20px rgba(154,167,191,0.4), -8px -8px 18px rgba(255,255,255,0.98);
+    }
+
+    /* HIGHLIGHT */
+    .highlight { padding-top: 2.4rem; padding-bottom: 2.4rem; }
+
+    .highlight-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .highlight-column { padding: 1.6rem 1.7rem; }
+    .highlight-column h2 { margin: 0 0 0.5rem; font-size: 1.4rem; }
+    .highlight-column p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* SECTIONS */
+    .section { padding-top: 3rem; padding-bottom: 3rem; }
+    .section-alt { padding-top: 3rem; padding-bottom: 3rem; }
+    .section-title { margin: 0 0 1.6rem; font-size: 1.6rem; }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.7rem; }
+    .card { padding: 1.6rem 1.6rem 1.45rem; }
+    .card-eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--text-muted); margin: 0 0 0.4rem; }
+    .card-title { margin: 0 0 0.6rem; font-size: 1.05rem; }
+    .card-text { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* TIMELINE */
+    .timeline-item { padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; }
+    .timeline-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.5rem; }
+    .timeline-header h3 { margin: 0; font-size: 1rem; }
+    .timeline-header span { font-size: 0.85rem; color: var(--text-muted); }
+    .timeline-text { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* EDUCATION */
+    .education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .education-item { padding: 1.5rem 1.6rem; }
+    .education-item h3 { margin: 0 0 0.3rem; font-size: 1rem; }
+    .education-school { margin: 0 0 0.2rem; color: var(--text-muted); font-size: 0.9rem; }
+    .education-item p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+
+    /* NEUMORPHIC SURFACES */
+    .hero-inner, .highlight-column, .card, .timeline-item, .education-item {
+      background: var(--card);
+      box-shadow: 14px 14px 28px var(--shadow-dark), -14px -14px 28px var(--shadow-light);
+      border-radius: 24px;
+    }
+
+    /* LINKS */
+    a { color: #375a9e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .project-link { color: var(--text-main); text-decoration: none; }
+    .project-link:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    .footer { padding: 1.1rem 1.5rem 1.4rem; }
+    .footer-inner { font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+      .nav-links a { margin-left: 0; margin-right: 0.7rem; }
+      .hero-inner { flex-direction: column; align-items: center; text-align: center; }
+      .hero-media { flex: none; width: 70%; max-width: 260px; }
+      .hero-content { text-align: center; }
+      .hero-subtitle { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .footer-inner { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -25,35 +274,20 @@
 
   <section id="hero" class="hero">
     <div class="hero-inner">
-
       <div class="hero-media">
-        <img
-          src="PROFILE%20PIC.jpeg"
-          alt="Atharva Prashant Kale"
-          class="hero-photo"
-        >
+        <img src="PROFILE%20PIC.jpeg" alt="Atharva Prashant Kale" class="hero-photo">
       </div>
-
       <div class="hero-content">
         <p class="hero-eyebrow">Embedded Systems. Network Engineering. Automation.</p>
-
         <h1 class="hero-title">Atharva Prashant Kale</h1>
-
         <p class="hero-subtitle">
           Graduate student in Internet of Things at Northeastern University.
           I engineer resilient systems where hardware logic, network packets, and physical machinery converge.
         </p>
-
         <div class="hero-actions">
-          <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">
-            View CV
-          </a>
-          <a href="https://github.com/AtharvaK1810" class="btn secondary" target="_blank" rel="noopener">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/atharvapkale" class="btn secondary" target="_blank" rel="noopener">
-            LinkedIn
-          </a>
+          <a href="CV%20Atharva%20Prashant%20Kale.pdf" class="btn primary" target="_blank" rel="noopener">View CV</a>
+          <a href="https://github.com/AtharvaK1810" class="btn secondary" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/atharvapkale" class="btn secondary" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -63,18 +297,11 @@
     <div class="highlight-inner">
       <div class="highlight-column">
         <h2>What I focus on</h2>
-        <p>
-          Critical Infrastructure Modernization, Embedded Firmware (C/C++),
-          Network Engineering (TCP/IP, DLR), and Hardware Security (FPGA).
-        </p>
+        <p>Critical Infrastructure Modernization, Embedded Firmware (C/C++), Network Engineering (TCP/IP, DLR), and Hardware Security (FPGA).</p>
       </div>
-
       <div class="highlight-column">
         <h2>How I work</h2>
-        <p>
-          I bridge the gap between legacy hardware and modern automation,
-          deploying fault-tolerant systems in the field.
-        </p>
+        <p>I bridge the gap between legacy hardware and modern automation, deploying fault-tolerant systems in the field.</p>
       </div>
     </div>
   </section>
@@ -82,28 +309,23 @@
   <section id="skills" class="section">
     <div class="section-inner">
       <h2 class="section-title">Technical Skills</h2>
-
       <div class="education-grid">
         <div class="education-item">
           <h3>Network Engineering</h3>
           <p>TCP/IP, DNS, DHCP, Routing/Switching, EtherNet/IP, DLR, Fiber Optic Troubleshooting</p>
         </div>
-
         <div class="education-item">
           <h3>Embedded & Firmware</h3>
           <p>C, C++, Python, Verilog, VHDL, FreeRTOS, ESP32, FPGA (Tang Nano/Xilinx)</p>
         </div>
-
         <div class="education-item">
           <h3>Industrial Automation</h3>
           <p>Studio 5000 (Allen-Bradley), Stratix Switches, SCADA, PLC Ladder Logic, Modbus</p>
         </div>
-
         <div class="education-item">
           <h3>Hardware Diagnostics</h3>
           <p>Megger ADX6 (Motor Testing), Oscilloscope, Logic Analyzer, PCB Design (Altium)</p>
         </div>
-
         <div class="education-item">
           <h3>Protocols</h3>
           <p>MQTT, CoAP, SPI, I2C, UART, PROFINET, ControlNet</p>
@@ -115,13 +337,11 @@
   <section id="projects" class="section">
     <div class="section-inner">
       <h2 class="section-title">Projects</h2>
-
       <div class="cards">
         <article class="card">
           <p class="card-eyebrow">Hardware Security</p>
           <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF"
-               target="_blank" rel="noopener" class="project-link">
+            <a href="https://github.com/AtharvaK1810/FPGA-Ring-Oscillator-PUF" target="_blank" rel="noopener" class="project-link">
               Ring Oscillator PUF on FPGA
             </a>
           </h3>
@@ -130,7 +350,6 @@
             to generate unique device keys without storing secrets in non-volatile memory.
           </p>
         </article>
-
         <article class="card">
           <p class="card-eyebrow">Embedded Systems</p>
           <h3 class="card-title">Landmine Detection Robot</h3>
@@ -139,12 +358,10 @@
             and report GPS coordinates via GSM.
           </p>
         </article>
-
         <article class="card">
           <p class="card-eyebrow">Automotive Integration</p>
           <h3 class="card-title">
-            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team"
-               target="_blank" rel="noopener" class="project-link">
+            <a href="https://github.com/AtharvaK1810/Hyperion-Racing-Team" target="_blank" rel="noopener" class="project-link">
               Formula SAE BSPD and Wiring Harness
             </a>
           </h3>
@@ -181,7 +398,7 @@
           <span>Broad Net India Pvt. Ltd. · Mumbai</span>
         </div>
         <ul class="timeline-text" style="padding-left: 1.2rem; margin-top: 0.5rem;">
-          <li style="margin-bottom: 0.5rem;"><strong>Configured and deployed routers, modems, and switches</strong> for residential and commercial clients, optimizing DNS settings and routing to reduce packet loss to <1% and ensure consistent connectivity.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Configured and deployed routers, modems, and switches</strong> for residential and commercial clients, optimizing DNS settings and routing to reduce packet loss to &lt;1% and ensure consistent connectivity.</li>
           <li style="margin-bottom: 0.5rem;"><strong>Engineered static IP setups and firewall rules,</strong> reducing unauthorized access incidents by 20% and maximizing network uptime.</li>
           <li style="margin-bottom: 0.5rem;"><strong>Validated physical layer integrity</strong> by calibrating and testing fiber-optic signal strength using optical power meters, ensuring link performance met ISP standards.</li>
           <li style="margin-bottom: 0.5rem;"><strong>Diagnosed hardware issues and executed remote firmware updates</strong> on customer-premises equipment (CPE), decreasing average downtime by ~30%.</li>
@@ -205,14 +422,12 @@
   <section id="education" class="section">
     <div class="section-inner">
       <h2 class="section-title">Education</h2>
-
       <div class="education-grid">
         <div class="education-item">
           <h3>MS in Internet of Things</h3>
           <p class="education-school">Northeastern University · Boston, MA</p>
           <p>2024 - 2026 (expected)</p>
         </div>
-
         <div class="education-item">
           <h3>BE in Electronics and Telecommunications</h3>
           <p class="education-school">MES Pillai College of Engineering · Mumbai</p>
@@ -225,7 +440,6 @@
   <section id="contact" class="section section-alt">
     <div class="section-inner">
       <h2 class="section-title">Contact</h2>
-
       <p>Email: <a href="mailto:kale.ath@northeastern.edu">kale.ath@northeastern.edu</a></p>
       <p>Contact: <a href="tel:+18572458916">(857) 245-8916</a></p>
       <p>Location: Boston, MA</p>
